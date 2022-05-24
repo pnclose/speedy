@@ -1,0 +1,810 @@
+/*
+Orange color: #e67e22
+Darker orange: #cf6d17
+Carolina blue: #4B9CD3
+Darker blue: #3480c7
+Red: #C30017
+Darker Red: #960018
+*/
+
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* ----- HEADINGS ----- */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #960018;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* ----- PARAGRAPHS ----- */
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+/* ----- ICONS ----- */
+
+.icon-awesome {
+    font-size: 350%;
+    display: block;
+    color: #960018;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #960018;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #960018;
+    font-size: 120%;
+    margin-right: 10px;
+    
+    /*secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/* ----- LINKS ----- */
+
+a:link,
+a:visited {
+    color: #960018;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #960018;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* ----- BUTTONS ----- */
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #960018;
+    border: 1px solid #960018;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #960018;
+    color: #960018;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #C30017;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #C30017;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #C30017;
+    color: #fff;
+}
+
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+
+header {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/dark_contrast_vert_main_copy.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/dark_contrast_vert_main_copy.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.simple-header {
+	background-image: none;
+    background-color: #f4f4f4;
+	height: 10vh;
+}
+
+.simple-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.simple-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+/*
+.simple-nav li a:link,
+.simple-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+*/
+
+.simple-nav li a:hover,
+.simple-nav li a:active {
+    border-bottom: 2px solid #960018;
+}
+
+.name-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 25%;
+    left: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-bar { 
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+/* Main navi */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #960018;
+}
+
+
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+/* Sticky navi */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-bar { display: block; }
+
+/* ----------------------------------------------- */
+/* FEATURES */
+/* ----------------------------------------------- */
+
+/*
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+*/
+
+
+/* ----------------------------------------------- */
+/* ABOUT */
+/* ----------------------------------------------- */
+
+.section-about {
+    padding: 0;
+}
+
+.chess-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.chess-showcase li {
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+.last-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.last-showcase li {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.last-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+
+
+.chess-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.chess-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.chess-photo img:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+
+
+/* ----------------------------------------------- */
+/* WHAT WE'RE DOING SECTION */
+/* ----------------------------------------------- */
+
+/*
+center-calandar is to center the calendar, probably best to actually use grid, but for testing use this
+*/
+
+.center-calendar-desktop {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-bottom: 40%;
+}
+
+.center-calendar-mobile {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    padding-bottom: 100%;    
+}
+
+/* Responsive iFrame */
+
+.calendar-box {
+    position: relative;
+    
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    
+}
+
+.calendar-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Phone */
+@media only screen and (max-width: 760px) {
+    .hidden-phone{   
+    display: none;
+   }
+}
+
+/* Desktop */
+@media only screen and (min-width: 761px) {
+  .hidden-desktop{
+   display: none;
+   }
+}
+
+.section-contribute {
+	padding: 0;
+    background-color: #f4f4f4;
+	height: 90vh;
+}
+
+.contribute-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.contribute-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.contribute-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.contribute-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+.contribute-photo {
+	float: left;
+	width: 50%;
+}
+
+.contribute-photo img {
+	/*
+	height: 100px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+	*/
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.contribute-text {
+	float: right;
+	text-align: left;
+	width: 50%;
+}
+
+.contribute-box ul {
+    list-style: square;
+	text-align: left;
+	padding-left: 10%;
+}
+
+.contribute-box ul li {
+    padding: 5px 0;
+}
+
+/* ----------------------------------------------- */
+/* MEET OUR TEAM OF PAZTERS */
+/* ----------------------------------------------- */
+
+.section-team {
+    background-color: #f4f4f4;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.patzer-feature {
+    margin-bottom: 5px;
+}
+
+
+/* ----------------------------------------------- */
+/* WHY WE'RE STILL BETTER THAN DUKE */
+/* ----------------------------------------------- */
+
+.section-duke {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back_tar_heels.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back_tar_heels.png);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+/* ----------------------------------------------- */
+/* GAMES */
+/* ----------------------------------------------- */
+
+.section-games {
+    background-color: #f4f4f4;
+}
+
+.game-box {
+	position: relative;
+	padding-bottom: 56.25%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.game-box iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.game-box div {
+    padding-right: 5.875%;
+    padding-left: 5.875%;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+@media only screen and (max-width: 760px) {
+	.game-box {
+		overflow: scroll;
+	}
+	.game-box iframe {
+		width: 115%;
+	}
+}
+
+.game-text-box {
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 2px 2px #efefef;
+	padding: 0;
+}
+
+.game-text-box ul {
+    list-style: none;
+}
+
+.game-text-box ul li {
+	display: flex;
+	padding-top: calc((18.75% - (5.875%/2.25))/2);
+	padding-bottom: calc((18.75% - (5.875%/2.25))/2);
+	border-bottom: 1px solid #555;
+}
+
+.game-text-box ul li:last-child {
+	border-bottom: none;
+}
+
+
+/* ----------------------------------------------- */
+/* WE'RE HAPPY TO HEAR FROM YOU */
+/* ----------------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited, 
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #00aced;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+/* ----------------------------------------------- */
+/* Animations */
+/* ----------------------------------------------- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
+
+
